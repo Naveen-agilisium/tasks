@@ -1,0 +1,21 @@
+{
+    "menu": [
+       
+        {
+            "title": "EMI Calculator",
+            "imgPath": "https://images.pexels.com/photos/7054419/pexels-photo-7054419.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "redirectUrl": "/emi-calculator"
+        },
+        {
+            "title": "Video Gallery",
+            "imgPath": "https://images.pexels.com/photos/221181/pexels-photo-221181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "redirectUrl": "/video-player"
+        },
+        {
+            "title": "Shopping Cart",
+            "imgPath": "https://images.pexels.com/photos/5926462/pexels-photo-5926462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "redirectUrl": ""
+        }
+
+    ]
+}

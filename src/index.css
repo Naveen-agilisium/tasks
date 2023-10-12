@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #F6F6F6;
+}
+
+input[type="range"] {
+  accent-color: #F55050;
+}
+
+.emiContainer {
+  padding: 20px;
+  grid-area: 1 / 1 / 2 / 2;
+  background: #fff;
+  margin-top: 30px;
+}
+
+.form-calculator {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 0 50px;
+}
+
+.emiContainer .form-group {
+  position: relative;
+  padding: 10px 0;
+}
+
+.emiContainer .form-group :is(label, input) {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.inputTxtGrp {
+  position: relative;
+}
+
+.inputTxtGrp>span {
+  position: absolute;
+  top: 0;
+  width: 25px;
+  display: inline-block;
+  height: 25px;
+  padding: 4px;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  background-color: #e9ecef;
+  border-radius: 5px 0 0 5px;
+}
+
+.emiContainer .form-group input[type="text"] {
+  height: 30px;
+  padding-left: 40px;
+  width: calc(100% - 40px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+input#principleAmt::before {
+  content: '₹1 Lac';
+  position: absolute;
+  bottom: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #F55050;
+}
+
+input#principleAmt::after {
+  content: '₹10 Cr';
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ff0000;
+}
+
+input#tenure::before {
+  content: '1 Yr';
+  position: absolute;
+  bottom: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #F55050;
+}
+
+input#tenure::after {
+  content: '30 Yrs';
+  position: absolute;
+  bottom: 3px;
+  right: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: #ff0000;
+}
+
+button {
+  display: block;
+  width: 100%;
+  background: #e13333;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 10px;
+}
+
+.emiDisplay {
+  grid-area: 1 / 2 / 2 / 3;
+  background: #fff;
+  margin-top: 30px;
+}
+
+.emiDisplay h3 {
+  background: #ff4040;
+  margin: 0;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.emiDisplay label,
+.emiDisplay h4 {
+  padding: 0 10px;
+  margin: 15px 5px;
+}
+
+.menuContainer {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menuContainer a {
+  text-decoration: none;
+  color: #000;
+}
+
+.menuCard {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  background: #fff;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 7px 25px rgb(0, 0, 0, .09);
+}
+
+.menuCard .menuImg {
+  width: 100%;
+  height: 150px;
+}
+
+.menuCard .menuImg img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+  height: 100%;
+  -webkit-filter: brightness(.5);
+  filter: brightness(.5);
+}
+
+.menuCard:hover .menuImg img {
+  -webkit-filter: brightness(1);
+  filter: brightness(1);
+}
+
+.menuCard p {
+  margin: 10px 0;
+}
+
+/* videoPlayerCSS */
+body:has(.videoPlayContainer) {
+  overflow: hidden;
+}
+
+.videoPlayContainer {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 70% auto;
+  color: #fff;
+  overflow: hidden;
+  background: #000;
+  height: 100vh;
+}
+
+.vidPlayer {
+  width: 100%;
+  padding-bottom: 36px;
+}
+
+.vidPlayer video {
+  width: 100%;
+  height: 450px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  outline: none;
+  border-bottom: 2px solid #6d6868;
+}
+
+#vidTitle {
+  margin: 0;
+  font-weight: 600;
+}
+
+#vidDesc {
+  font-size: 14px;
+  font-weight: 200;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.vidList {
+  overflow-y: auto;
+  height: 100%;
+  padding-left: 15px;
+}
+
+.vidList::-webkit-scrollbar {
+  width: 1px;
+  background: transparent;
+}
+
+.vidCard {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #383737;
+  display: flex;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.vidCard:last-child {
+  padding-bottom: 50px;
+}
+.vidCard .vidImg .playIcon{
+  display: none;
+}
+.vidCard.played .vidImg .playIcon{
+  display: flex;
+}
+.vidImg {
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+
+.playIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0 0 0 / 76%);
+  font-size: 3em;
+}
+
+.vidImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vidDetails {
+  width: 60%;
+  padding: 5px 10px;
+}
+
+.vidDetails p#title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.vidDetails p#desc {
+  font-size: 11px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 5px 0 0 0;
+  font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  body:has(.videoPlayContainer) {
+    overflow: auto;
+  }
+
+  .videoPlayContainer {
+    grid-template-columns: auto;
+    height: auto;
+  }
+
+  .vidPlayer video {
+    height: 350px;
+  }
+
+  .vidList {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .vidCard:last-child {
+    padding-bottom: 5px;
+  }
+
+}
+
+@media screen and (max-width: 426px) {
+  .vidPlayer video {
+    height: 200px;
+    border-radius: 5px;
+  }
+
+  .vidList {
+    grid-template-columns: auto;
+  }
+}
