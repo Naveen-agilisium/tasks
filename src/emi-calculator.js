@@ -103,7 +103,7 @@ function EmiCalc() {
               <span>
                 📈	</span></div>
           </div>
-          <button onClick={emiCalculation}>EMI Calculate</button>
+          <button id ="emiBtn"onClick={emiCalculation}>EMI Calculate</button>
         </div>
         <EmiDisplay/>
 

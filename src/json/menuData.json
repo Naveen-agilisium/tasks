@@ -11,11 +11,16 @@
             "imgPath": "https://images.pexels.com/photos/221181/pexels-photo-221181.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
             "redirectUrl": "/video-player"
         },
+        
         {
             "title": "Shopping Cart",
             "imgPath": "https://images.pexels.com/photos/5926462/pexels-photo-5926462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-            "redirectUrl": ""
+            "redirectUrl": "/shopping"
+        },
+        {
+            "title": "Task",
+            "imgPath": "https://images.pexels.com/photos/6393013/pexels-photo-6393013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+            "redirectUrl": "/task-manager"
         }
-
     ]
 }

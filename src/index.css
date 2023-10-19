@@ -1,4 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
 
 body {
   margin: 0;
@@ -103,7 +107,7 @@ input#tenure::after {
   color: #ff0000;
 }
 
-button {
+button#emiBtn {
   display: block;
   width: 100%;
   background: #e13333;
@@ -133,6 +137,10 @@ button {
 .emiDisplay h4 {
   padding: 0 10px;
   margin: 15px 5px;
+}
+
+#emiBtn {
+  display: none;
 }
 
 .menuContainer {
@@ -247,12 +255,15 @@ body:has(.videoPlayContainer) {
 .vidCard:last-child {
   padding-bottom: 50px;
 }
-.vidCard .vidImg .playIcon{
+
+.vidCard .vidImg .playIcon {
   display: none;
 }
-.vidCard.played .vidImg .playIcon{
+
+.vidCard.played .vidImg .playIcon {
   display: flex;
 }
+
 .vidImg {
   width: 60%;
   height: 100%;
@@ -300,10 +311,18 @@ body:has(.videoPlayContainer) {
   margin: 5px 0 0 0;
   font-style: italic;
 }
+ /* shopping Cart */
+
+ 
 
 @media screen and (max-width: 768px) {
+
   body:has(.videoPlayContainer) {
     overflow: auto;
+  }
+
+  #emiBtn {
+    display: none;
   }
 
   .videoPlayContainer {
