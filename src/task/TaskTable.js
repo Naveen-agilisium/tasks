@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {AiFillCloseCircle,AiFillEdit,AiFillDelete} from "react-icons/ai";
+import {AiFillCloseCircle,AiFillEdit} from "react-icons/ai";
 import {flexRender, getCoreRowModel, useReactTable} from "@tanstack/react-table";
 import {format} from 'date-fns'
 
@@ -64,7 +64,7 @@ function TaskTable() {
         {
             accessorKey:'id',
             header: 'action',
-            cell: (props)=><><button className='mr-2' id={props.getValue()} onClick={editHandle}><AiFillEdit/></button> <button><AiFillDelete/></button></>
+            cell: (props)=><button   onClick={editHandle} id={props.getValue()}><AiFillEdit/></button>
 
         }
     ]
@@ -74,7 +74,8 @@ function TaskTable() {
         columns:columns,
         getCoreRowModel:getCoreRowModel()
     });
-   const addItem =()=>{
+   const addItem =(event)=>{
+    event.preventDefault();
     console.log(tasks);
     setTasks((tasks)=>[
         ...tasks,
@@ -94,10 +95,11 @@ function TaskTable() {
 
    const editHandle =(event)=>{
     //console.log(event.target.id);
+    event.preventDefault();
     let valnew = tasks;
 
     const res = valnew.find((e)=>{
-        return e.id == event.target.id
+        return e.id == event.currentTarget.id
     })
     setDefValue(res);
     setAddModel(true);
