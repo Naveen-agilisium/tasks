@@ -52,7 +52,7 @@ input[type="range"] {
   top: 0;
   width: 25px;
   display: inline-block;
-  height: 25px;
+  height: 30px;
   padding: 4px;
   text-align: center;
   border-right: 1px solid #ccc;
@@ -313,6 +313,7 @@ body:has(.videoPlayContainer) {
 }
  /* shopping Cart */
 
+ 
  
 
 @media screen and (max-width: 768px) {
