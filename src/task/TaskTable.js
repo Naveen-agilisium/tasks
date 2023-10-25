@@ -157,9 +157,9 @@ function TaskTable() {
   <>
   <div  className='container mx-auto p-[50px]'>
     {addmodel ?(
-    <div className='fixed inset-0 bg-black z-1 bg-opacity-75 flex justify-center items-end lg:items-center'>
+    <div className='fixed inset-0 bg-black z-1 bg-opacity-75 flex justify-center items-end items-center'>
     
-        <form className=' flex flex-col bg-gray-300 rounded-md overflow-hidden  w-full lg:w-[50vw] lg:h-[80vh]'>
+        <form className=' flex flex-col bg-gray-300 rounded-md overflow-hidden  w-full lg:w-[50vw]'>
         <div className="flex items-center justify-between px-4 py-4 bg-zinc-900 text-white">
               <div className="flex items-center">
                 <h1 className="font-bold">Add New Task</h1>
