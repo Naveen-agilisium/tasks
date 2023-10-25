@@ -21,7 +21,7 @@ const ProductPage = () => {
 
   console.log("Products :", products);
   return (
-    <div className="ui grid container">
+    <div className="flex-container">
       <ProductComponent />
     </div>
   );

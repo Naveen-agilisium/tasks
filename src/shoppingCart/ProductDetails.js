@@ -7,8 +7,10 @@ import {
 } from "../redux/actions/productsActions";
 const ProductDetails = () => {
   const { productId } = useParams();
+const cartValue = JSON.parse(localStorage.getItem('cart'))
+
+
   let product = useSelector((state) => state.selectedProductsReducer);
-  console.log("EngathanIrukan==>",product);
   const { image, title, price, category, description } = product;
   const dispatch = useDispatch();
   const fetchProductDetail = async (id) => {
@@ -26,7 +28,7 @@ const ProductDetails = () => {
   return (
     <div className="ui grid container">
       {Object.keys(product).length === 0 ? (
-        <div>...Loading</div>
+        <div className="flex justify-center items-center h-screen w-full">...Loading</div>
       ) : (
         <div className="ui placeholder segment">
           <div className="ui two column stackable center aligned grid">

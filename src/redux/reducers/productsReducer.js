@@ -4,7 +4,7 @@ const intialState = {
 };
 
 export const productsReducer = (state = intialState, { type, payload }) => {
-  //console.log(payload)
+  //console.log("prductsreducer",payload)
   switch (type) {
     case ActionTypes.SET_PRODUCTS:
       return { ...state, products: payload };
